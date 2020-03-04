@@ -4,8 +4,24 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
+  pathPrefix: `/gatsby-test`,
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
